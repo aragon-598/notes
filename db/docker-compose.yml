@@ -1,0 +1,17 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: quicknotes_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: jdZKV54@BGmDPR
+      MYSQL_DATABASE: quicknotes
+      MYSQL_USER: notes_service
+      MYSQL_PASSWORD: i!3dvJ^I&ga6k3
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
